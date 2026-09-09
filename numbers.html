@@ -8,6 +8,7 @@
 <body>
 
   <input type="text" id="inputField">
+  <button onclick="convert()">submit</button>
 
   <div id="field">This is a text</div>
     
@@ -37,6 +38,79 @@
   let myDiv = document.getElementById('field')
 
   console.log(myDiv);
+
+
+  let num1 = 30; 
+  let num2 = 30.356; 
+  let num3 = '30.36'; 
+
+  // console.log(typeof num2, typeof num1, typeof num3, typeof true, typeof null, typeof undefined); 
+
+  console.log(typeof num1);
+
+  console.log(num2.toString()); // '30.356'
+
+  console.log(num2.toFixed(2)); // 30.36
+
+  console.log(num2.toPrecision(3)); // 30.4 
+
+  // Math methods .................................................................................
+
+ let minimumNumber = Math.min(10, 30, 25, 15, 8); //  8
+ let maximumNumber = Math.max(10, 30, 25, 15, 8); //  30
+
+ console.log(minimumNumber, maximumNumber);
+
+ console.log(Math.abs(-30)); // removes negativity
+
+ console.log(Math.round(30.55)); // removes negativity
+
+ console.log( Math.pow(2, 3));
+ console.log( Math.sqrt(144));
+
+ console.log( Math.cbrt(27));
+
+ // Number methods
+
+ ''
+ console.log(Number.parseInt('30.56'));
+ console.log(Number.parseFloat('30.56'));
+
+ 
+ console.log(Number.parseInt('abc30.56'));  // NaN
+ console.log(Number.parseInt('30.56abc'));  // 30
+ console.log(Number.parseFloat('30.56abc'));  // 30.56
+ console.log(parseFloat('30.56abc'));  // 30.56
+ console.log(parseInt('30.56abc'));  // 30.56
+ console.log(Number('30.56asad'));  // NaN
+ console.log(Number('30.56'));  // 30.56
+ console.log(Number(''));  // 0 
+
+
+ // Math methods ..........................
+
+ console.log(Math.floor('20.945'));
+ console.log(Math.ceil('20.1'));
+
+ console.log(Math.ceil('20.0000')); // 
+ 
+ 
+ function convert() {
+   
+   let inputField = document.getElementById('inputField')
+  
+   console.log(inputField.value);
+
+}
+
+
+ 
+  
+ 
+
+
+  
+  
   
 
 
