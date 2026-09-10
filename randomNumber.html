@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <input type="text" id="inputField">
+  <input type="text" id="inputField2">
+
+  <div id="field">This is a text</div>
+    
+</body>
+<script>
+ 
+ // Math.random() ; 0 - 0.99999 
+
+ //    (0 | 0.999) * 10
+//  console.log(Math.random() * 10); // 0 - 9.999
+
+//  // Generates a number from  0 - 10
+//  let randomNumber = Math.ceil(Math.random() * 10) // 0 - 10
+ 
+//  console.log(randomNumber);
+
+ // Generate a number from 1 - 10 
+
+ let randomNumber2 = Math.random() * 10 ; // 0 - 9.999
+
+ randomNumber2 = randomNumber2 + 1; // 1 - 10.999 
+
+ console.log(Math.floor(randomNumber2)); // 1 - 10
+ 
+
+ // Generate a number from 2 - 10 using ceil
+ let randomNumber3 = Math.random() * 8   // 0 - 7.999
+
+ randomNumber3 = Math.ceil(randomNumber3 + 2) // 2 -  9.999 
+
+
+ // Generate a number from 2 - 10 using ceil
+ 
+ let randomNumber4 = (Math.random() * 9) + 2   // 2 - 10.999
+
+ randomNumber4 = Math.floor(randomNumber4) // 2 -  10
+
+ console.log(randomNumber4); 
+
+ // From 10 - 15 
+
+ let randomNumber5 = Math.ceil((Math.random() * 10) +5) // 0 - 9.999 // 5 , 14.999
+
+ console.log(randomNumber5);
+ 
+ 
+
+</script>
+</html>

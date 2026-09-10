@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="numberField"> 
+    <button onclick="add()">add to 20</button>
+    
+</body>
+
+<script> 
+
+// Arithmetic operators : / * - + %
+
+// Assignment Operators 
+ let value = 10 ;
+
+ value = 50; 
+
+ console.log(value); /// 50  
+
+ value += 10  // value = value + 10
+
+ console.log(value); // 60
+
+ value -= 20 // 40
+
+ console.log(value);
+
+ 
+ value *= 20 // 800
+
+ console.log(value); 
+
+ 
+ value /= 20 // 40
+
+ console.log(value);
+
+
+ value %= 2 //  0 
+
+ value = 20;
+
+ console.log(value);
+ 
+ console.log(2 ** 3); // 8
+
+ value **= 2; //
+
+ console.log(value);
+ 
+ 
+ 
+ function add() {
+    let numberField = document.getElementById('numberField'); 
+    let number= numberField.value; 
+
+    console.log(typeof number);
+    
+    number = +number + 20; 
+
+    console.log(number);
+    
+
+ }
+ 
+
+
+</script>
+
+</html>

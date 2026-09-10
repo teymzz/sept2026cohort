@@ -8,6 +8,7 @@
 <body>
 
   <input type="text" id="inputField">
+  <input type="text" id="inputField2">
   <button onclick="convert()">submit</button>
 
   <div id="field">This is a text</div>
@@ -18,9 +19,15 @@
  function convert() {
    
    let myField = document.getElementById('inputField') // input
+   let myField2 = document.getElementById('inputField2') // input
+   let myDiv = document.getElementById('field') // input
    let myNumber = Number(myField.value)
 
    let total = 20 + myNumber;
+
+   myField2.value = total
+
+   myDiv.innerHTML = total
 
    console.log(total); 
 
