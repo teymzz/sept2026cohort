@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text"> <!-- collect the sentence -->
+    <input type="text"> <!-- modifier -->
+    
+</body>
+<script>
+
+    let text = 'This is SQI class'; 
+
+    let splitText = text.split('i') // [ 'This is SQI class']
+
+    console.log(splitText);
+
+
+    let newText = 'The class we did today was javascript methods. Tomorrow we are going to continue on string methods just like we did today'   
+    
+
+    let newTextSplit = newText.split(''); 
+
+    console.log(newTextSplit);
+    
+
+
+    // string method : split, index, indexOf, lastIndexOf, concat, toUpper, 
+    // toLower, substring, substr, repeat, replace, endsWith, 
+    // startsWith, trimStart/trimLeft, trimRight/trimEnd,  match, search 
+
+
+    let myText = '      This is a new text    '
+
+    // trimLeft() / trimStart() 
+
+    console.log(myText);
+    
+    let myTrimmedText1 = myText.trimLeft() // 'This is a new text    '
+    
+    console.log(myTrimmedText1);
+
+    let myTrimmedText2 = myText.trimRight() // 'This is a new text    '
+
+    console.log(myTrimmedText2);
+
+    let myTrimmedText = myText.trim() // 'This is a new text    '
+
+    console.log(myTrimmedText);
+
+
+    let upperText = text.toUpperCase() 
+    
+    console.log(upperText);
+
+    let lowerText = text.toLowerCase() 
+    
+    console.log(lowerText);
+</script>
+</html>
