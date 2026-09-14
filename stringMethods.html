@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+
+
+    
+</body>
+
+</html>
+
+<script>
+    let myString = "This is SQI class"; 
+
+    // Th,
+    // s 
+    // s SQI class
+
+    // string method : split, index, indexOf, lastIndexOf, concat, toUpper, 
+    // toLower, substring, substr, repeat, replace, endsWith, 
+    // startsWith, trimStart/trimLeft, trimRight/trimEnd,  match, search 
+
+    let sentenceSplit = myString.split(' ')
+
+    console.log(sentenceSplit);
+
+    let sentenceSplit1 = myString.split('i')
+    
+    console.log(sentenceSplit1);
+
+    let sentenceSplit2 = myString.split() // ['This is SQI class']
+    
+    console.log(sentenceSplit1);
+
+    let sentenceSplit3 = myString.split('') // ['T','h','i','s',' ','i','s',' ','S','Q','I',' ','c','l','a','s','s']
+    
+    console.log(sentenceSplit3);
+
+    // task: split the following strings to words
+
+    let myString2 = '         This is a new value     '; 
+
+    console.log(myString2);
+    let leftSpaceRemoved = myString2.trimLeft() // trimStart() : 'This is a new value    '
+    
+    console.log(leftSpaceRemoved);
+    
+    let rightSpaceRemoved = myString2.trimRight() // trimEnd() : '         This is a new value'
+
+    console.log(rightSpaceRemoved);
+    
+    let trimmedSpaces = myString2.trim() // 'This is a new value'
+
+    console.log(trimmedSpaces);
+
+    // toUpperCase
+    let upperCaseString = myString.toUpperCase()
+
+    console.log(upperCaseString);
+
+    // toLowerCase
+    let lowerCaseString = myString.toLowerCase()
+
+    console.log(lowerCaseString);
+
+
+    // let myString = "This is SQI class";  //
+
+
+    // Assignment.... 
+
+    /* 
+    
+    1. Create an input field
+    2. Get all words in typed into the input into an array list.
+    3. Print the words on the web page 
+    4. Split "This is SQI class" with all 'i' characters case-insensitive
+    
+    */
+    
+    
+
+
+</script>
