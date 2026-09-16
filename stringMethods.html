@@ -20,9 +20,9 @@
     // s 
     // s SQI class
 
-    // string method : split, index, indexOf, lastIndexOf, concat, toUpper, 
-    // toLower, substring, substr, repeat, replace, endsWith, 
-    // startsWith, trimStart/trimLeft, trimRight/trimEnd,  match, search 
+    // string methods : split, index, indexOf, lastIndexOf, concat, toUpperCase, 
+    // toLowerCase, substring, substr, repeat, replace, endsWith,
+    // startsWith, trimStart/trimLeft, trimRight/trimEnd,  match, search, includes, charCodeAt, matchAll
 
     let sentenceSplit = myString.split(' ')
 
@@ -85,6 +85,74 @@
     // 
     
     
+   
+    // split, trimStart/trimLeft, trimRight/trimEnd, toUpperCase, toLowerCase,
+    // concat, indexOf, lastIndexOf, startsWith,  endsWith,substring, substr, repeat, 
+    // match, search, includes, charCodeAt, replace
 
+    // concat 
+
+    let word = 'This';
+    let word2= ' fine';
+
+    console.log(word.concat(' is', ' a', word2, ' book'));
+
+    //indexOf
+
+    let sqiString = "This is SQI class cla"; 
+    console.log(sqiString.indexOf('cla'));
+
+    //lastIndexOf 
+    console.log(sqiString.lastIndexOf('cla'));
+    
+
+    // startsWith
+    console.log(sqiString.startsWith('This')); // true
+    console.log(sqiString.startsWith('this')); // false
+
+    // endsWith
+    console.log(sqiString.endsWith('cla')); // true
+    console.log(sqiString.endsWith('is cla')); // false
+
+    // substring 
+    console.log(sqiString.substring(2, 7));
+
+    console.log(sqiString.substring(9, -1));
+
+    // substr
+    let newString = 'This dictionary is good';
+    console.log(newString.substr(7, 5));
+    
+
+    let sqiString2 = "This is SQI class cla"; 
+    console.log(sqiString2.indexOf('S'));
+
+    let myCutOutString = sqiString2.substring(8, 11)
+
+    console.log(myCutOutString);
+    
+    let myCutOutString2 = sqiString2.substr(8, 3) 
+
+    console.log(myCutOutString2);
+
+    // console.log(myCutOutString2.su); 
+
+    // console.log(newString.substring(-14, -1)); // wrong
+
+    // let newString = 'This dictionary is good';
+    console.log(newString.substr(-7, 4));
+
+
+    //replace() 
+
+    let mySentence = 'This is a book that was given to me by my friend. The book is very good.';
+
+    console.log(mySentence);
+    console.log(mySentence.replace('book', 'novel'));
+    console.log(mySentence.replaceAll('book', 'novel'));
+    
+    
+    
+    
 
 </script>

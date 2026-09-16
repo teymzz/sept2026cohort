@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 1.4em;
+            display: grid;
+            place-items: center;
+            background-color: black;
+            height: 100vh;
+        }
+        .calculator{
+            background-color: white;
+            padding: 10px;
+        }
+        .buttons {
+            padding: 1em; 
+            display: flex;
+            gap: 1em;
+            button {
+                font-size: 1.2em;
+                border: none; 
+                padding: 4px;
+                background-color: black;
+                color: white;
+                width: 30px;
+                /* 
+                height: 20px; */
+            }
+        }
+        #output {
+                background-color: #100d27;
+                padding: 2px;
+                border: solid 2px rebeccapurple;
+                color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="">
+            <input type="text" id="number1">
+            <span id="operator"></span>
+            <input type="text" id="number2">
+        </div>
+        <div class="buttons">
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">*</button>
+            <button onclick="divide()">/</button>
+            <button onclick="modulus()">%</button>
+        </div>
+        <div id="output"></div>
+    </div>
+    
+</body>
+<script>
+
+    let numField1 = document.getElementById('number1')
+    let numField2 = document.getElementById('number2')
+
+
+    function add() {
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+        
+        let total = num1 + num2; 
+        document.getElementById('output').innerHTML = total
+        document.getElementById('operator').innerHTML = '+'
+
+    }
+
+    function subtract() {
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+    
+        let total = num1 - num2; 
+        
+        document.getElementById('output').innerHTML = total
+    }
+
+    function divide() {
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 / num2;   
+        document.getElementById('output').innerHTML = total
+    }
+
+    function multiply() {
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 * num2;   
+        document.getElementById('output').innerHTML = total
+    }
+
+    function modulus() {
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 % num2;   
+        document.getElementById('output').innerHTML = total
+    }
+
+</script>
+</html>
