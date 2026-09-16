@@ -6,6 +6,38 @@
     <title>Document</title>
 </head>
 <body>
+
+    <textarea type="text" id="textfield" cols="100" rows="5" style="resize: none;"></textarea>
+    <button onclick="censor()">censor</button>
     
 </body>
+<script>
+    // let newString = 'This dictionary is good';
+
+    // let beforeWord = newString.substr(0, 5); // This
+    // let afterWord = newString.substr(15); //  is good
+    // let word = newString.substr(5, 10).toUpperCase(); //  dictionary ->DICTIONARY
+
+    // let finalSentence = beforeWord + word + afterWord
+    // finalSentence = `${beforeWord}${word}${afterWord}`
+
+    // console.log(finalSentence);
+
+    let inputTextField = document.getElementById('textfield')
+
+    function censor() {
+
+        let sentence = inputTextField.value.trim()
+
+        sentence = sentence.replaceAll('stupid', 'st*pid')
+        sentence = sentence.replaceAll('idiot', 'id*ot')
+        sentence = sentence.replaceAll('crazy', 'cr*zy')
+        sentence = sentence.replaceAll('insane', 'ins*ne')
+
+        console.log(sentence);
+        
+
+    }
+    
+</script>
 </html>

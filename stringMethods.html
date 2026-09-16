@@ -82,13 +82,11 @@
     
     */
 
-    // 
-    
-    
+    //
    
     // split, trimStart/trimLeft, trimRight/trimEnd, toUpperCase, toLowerCase,
-    // concat, indexOf, lastIndexOf, startsWith,  endsWith,substring, substr, repeat, 
-    // match, search, includes, charCodeAt, replace
+    // concat, indexOf, lastIndexOf, startsWith,  endsWith,substring, substr, slice
+    // repeat, includes, charCodeAt, replace // match, search
 
     // concat 
 
@@ -142,14 +140,34 @@
     // let newString = 'This dictionary is good';
     console.log(newString.substr(-7, 4));
 
-
-    //replace() 
-
     let mySentence = 'This is a book that was given to me by my friend. The book is very good.';
 
     console.log(mySentence);
     console.log(mySentence.replace('book', 'novel'));
     console.log(mySentence.replaceAll('book', 'novel'));
+
+    //  let newString = 'This dictionary is good';
+    let slicedWord1 = newString.slice(0, 4); // This
+    let slicedWord2 = newString.slice(-6); // s good
+
+    console.log(slicedWord2);
+
+     console.log('book '.repeat(10));
+
+     console.log('This is a textbook given to me. The textbook is fine'.match('textbook')); // ['textbook']
+     console.log('This is a textbook given to me. The textbook is fine'.match(/^textbook$/)); // null
+     console.log('This is a textbook given to me. The textbook is fine'.match(/(textbook|fine)/g)); // ['textbook'.'textbook','fine']
+     console.log('This is a TEXTBOOK given to me. The textbook is fine'.match(/(textbook|fine)/ig)); // ['textbook']
+    //  console.log('acedbc'.match(/[abc]/g)); // ['textbook']
+    //  console.log('acedbc'.match(/[abc]/g)); // ['textbook']
+
+    console.log('This is a TEXTBOOK given to me. The textbook is fine'.includes('TEXTBOO '));
+    
+    // console.log(/a{3}\s/.test('aaaa ldkda alkas asldkasds '));
+
+     
+    
+    
     
     
     

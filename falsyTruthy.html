@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input">
+    <input type="text" id="input2">
+    <button onclick="submit()">Submit</button>
+    
+</body>
+<script>
+    /* 
+
+    FALSY VALUES
+    null 
+    undefined 
+    ''
+    NaN
+    0 
+    false
+    On
+    
+    */
+
+   /* 
+     Comparison Operators  will return a boolean of TRUE or FALSE
+
+     == 
+     ===
+     >
+     <
+     >=
+     <=
+   
+   */
+
+   console.log(2 == '2'); // true
+   console.log(1 == true); // true
+   console.log(2 == true); // false
+
+   console.log(2 === '2'); // false
+   console.log(1 === true); // false
+   console.log(2 === true); // false
+   console.log(2 === 2); // false
+
+   console.log(2 > 3);
+   console.log(2 < 3);
+   console.log(3 >= 3);
+   console.log(3 <= 3);
+
+   // logical operators 
+
+   // && 
+   // ||
+
+   // Condtionals .... 
+
+   function submit() {
+       
+       let inputField = document.getElementById('input');
+       let inputField2 = document.getElementById('input2');
+       
+       let inputValue = +inputField.value.trim()
+       let inputValue2 = inputField2.value.trim();
+       
+       console.log(inputValue);
+       
+
+    //    if(inputValue){
+        
+    //       console.log(inputValue + inputValue2);
+          
+    
+    //    }
+       if((inputValue > 2) || (inputValue2 > 4)){
+        
+          console.log(inputValue + inputValue2);
+          
+    
+       }
+   }
+   
+
+   
+   
+</script>
+</html>
