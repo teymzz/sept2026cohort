@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;;
+            background-color: black;
+            color: white;
+            height: 100vh;
+        }
+
+        .signup{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            background-color: #2e0a52;
+            padding: 10px;
+            font-size: 14px;
+            #output:not(:empty){
+                color: #ff8181; 
+                padding: 1em 0;
+            }
+            input{
+                border: none; 
+                font-size: inherit;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup">
+        <div id="output"></div>
+        <div>
+            <input type="text" name="" id="fname" placeholder="firstname">
+        </div>
+        <div>
+            <input type="text" name="" id="lname" placeholder="lastname">
+        </div>
+        <div>
+            <input type="text" name="" id="pass" placeholder="password">
+        </div>
+        <div class="">
+            <button onclick="signup()">Signup</button>
+        </div>
+    </div>
+
+    <div class="">
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <input type="submit" onclick="submit()">
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+
+    // console.log(!" "); // false
+
+
+    console.log(NaN === NaN);  // false
+    
+    console.log(+"abc");
+    
+    console.log(Number.isNaN(+"abc"));
+
+    console.log(isNaN("abc"));
+    
+    
+    
+
+    let fnameField = document.getElementById('fname')
+    let lnameField = document.getElementById('lname')
+    let passField = document.getElementById('pass')
+    let outputField = document.getElementById('output')
+
+    function signup() {
+        let fname = fnameField.value.trim();
+        let lname = lnameField.value.trim();
+        let password = passField.value.trim();
+
+        outputField.innerHTML = '';
+
+        if(!fname || !lname || !password){
+            outputField.innerHTML = ('All fields are required!');
+        }else{
+            if(password.length < 6){
+                outputField.innerHTML = ('Password must be greater than 6');
+            }else{
+                 outputField.innerHTML = 'All fields completed';
+            }
+        }
+
+        // if(!fname){
+        //     outputField.innerHTML = 'Please type firstname';
+        // }else if(!lname){
+        //     outputField.innerHTML = 'Please type lastname';
+        // }else if(!password){
+        //     outputField.innerHTML = 'Please type password';
+        // }else{
+        //     outputField.innerHTML = 'All fields completed';
+        // }
+    }
+
+    
+    let numField1 = document.getElementById('num1')
+    let numField2 = document.getElementById('num2')
+
+
+    function submit() {
+        let num1 = numField1.value.trim()
+        let num2 = numField2.value.trim()
+
+        if(isNaN(num1)){
+            console.log("Please input a valid number in field 1");
+        }else if(isNaN(num2)){
+            console.log("Please input a valid number in field 2");
+        }else{
+
+            num1 = +num1
+            num2 = +num2
+
+            console.log(num2);
+            
+        }
+
+    }
+
+</script>
