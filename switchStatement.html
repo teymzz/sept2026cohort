@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <input type="text" placeholder="month" id="month">
+    <button onclick="getDays()">Get days</button>
     
 </body>
 <script>
@@ -22,17 +25,78 @@
     //         break;
     // }
 
-    switch(true) {
-        case 2 < 5: 
-            console.log('2 is greater than 5'); 
-            break;
-        case 5 == 2: 
-            console.log("5 is equals to 2");
-            break;
-        default: 
-           console.log("None of the test conditions are satisfied");
-           break;
+    // switch(true) {
+    //     case 2 < 5: 
+    //         console.log('2 is greater than 5'); 
+    //         break;
+    //     case 5 == 2: 
+    //         console.log("5 is equals to 2");
+    //         break;
+    //     default: 
+    //        console.log("None of the test conditions are satisfied");
+    //        break;
         
+    // }
+
+//      Enter a month: January
+//   January has 31 days.
+
+//   Enter a month: JANUARY
+//   January has 31 day
+
+//   Enter a month: February
+//   February has 28 days.
+
+//   Enter a month: FEbruary
+//   February has 28 days.
+
+function getDays() {
+    let monthField = document.getElementById('month').value.trim().toLowerCase(); 
+
+    if(monthField === 'january'){
+        console.log('January has 31 days');
+    }else if(monthField === 'february'){
+        console.log('February has 28 days');
+    }else{
+        if(!monthField){
+            console.log('Please enter a month');
+        }else{
+            console.log(`Month ${monthField} is not available`);
+            if(monthField != 'march' && monthField != 'july' ) {
+                console.log(`Month ${monthField} has 31 days`);
+            }
+        }
     }
+
+}
+
+// ++ 
+
+// --
+
+let num = 30; 
+
+let increase = ++num
+
+console.log(num);
+
+console.log(++num)  // 32
+
+console.log(num);
+
+console.log(increase);
+
+num  = 2;
+let increase2 = num++ // 2
+
+console.log(increase2);
+console.log(num);
+
+num = 5; 
+
+// console.log(++num); // 6
+console.log(num++); // 5
+console.log(num); // 6
+
 </script>
 </html>
