@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="show()">submit</button>
+    <span id="result"></span>
+    
+</body>
+<script>
+    function show(){
+        
+        let input = document.getElementById('input').value.trim().toLowerCase()
+        let output = document.getElementById('result')
+
+        if (input === ''){
+        output.innerHTML = 'invalid month'
+        }
+
+
+       else if (input === 'january' || input === 'jan'){
+            output.innerHTML= 'january has 31 days'
+
+        }
+
+        else if (input === 'february' || input=== 'feb'){
+        output.innerHTML= 'february has 28 days'
+        } 
+        else if (input === 'march' || input==='mar'){
+        output.innerHTML= 'march has 31 days'
+        } 
+        else if (input === 'april' || input==='apr'){
+        output.innerHTML= 'april has 30 days'
+        } 
+        else if (input === 'may'){
+        output.innerHTML= 'may has 31 days'
+        } 
+        else if (input === 'june' || input==='jun'){
+        output.innerHTML= 'june has 30 days'
+        } 
+        
+        
+
+    }
+
+</script>
+</html>
