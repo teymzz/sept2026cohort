@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="output">
+
+    </div>
+    
+</body>
+<script>
+
+    let items = '1,2,3,4,5 ,6,7,8,9,0';
+
+    // console.log(items.split()); // [ '1,2,3,4,5,6,7,8,9,0']
+    // console.log(items.split(''));  // [ '1', ',', '2', ',', ...]
+    // console.log(items.split(',')); //  [ '1','2','3','4','5','6','7','8','9','0']
+
+    items = items.split(',')
+    console.log(items); // [ '1' ,'2' , '3' ,'4' ,'5 ' ,'6' , '7' ,'8' , '9' , '0']
+    
+
+    let languages = ['PHP','PYTHON','RUST','JAVA','KOTLIN','JAVSCRIPT', 'JAVA']
+
+    console.log(languages);
+
+    languages.push('HTML');
+    languages.push('CSS');
+    languages.push('JAVA');
+    
+    
+    console.log(languages, languages.length);
+
+    console.log(languages[4]);
+
+    console.log(languages[ languages.length -1]);
+
+    console.log(languages.indexOf('JAVA')); // 3
+    console.log(languages.lastIndexOf('JAVA')); // 9
+    
+    console.log(languages.toString());
+    console.log(items.toString());
+
+    console.log(languages.join());
+    console.log(languages.join(' '));
+
+    let output = document.getElementById('output'); 
+    let result = ''
+
+    for (let index = 0; index < languages.length; index++) {
+
+        result += (index + 1) + '. ' + languages[index] + '<br>';
+        
+    }
+
+    output.innerHTML = result
+
+    // for (let index = 0; index < 5; index++) {
+    //  console.log('ade'+ (index + 10)); 
+    // }
+    
+    
+</script>
+</html>
