@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text"><button>Add Todo</button>
+    <div id="output"></div>
+    
+</body>
+<script>
+    //  - index
+    // - indexOf
+    // - lastIndexOf
+    // - length
+    // - toString
+    
+    //  - slice
+    // - splice
+    // - pop
+    // - shift
+    // - unshift
+    // - reduce
+    // - sort
+
+    let languages = ['HTML','CSS','JAVA','JAVASCRIPT','PYTHON','RUST', 'JAVA', 'PHP','JAVA','KOTLIN']
+
+    console.log(languages.length);
+    console.log(languages.indexOf('JAVA'));
+    console.log(languages.lastIndexOf('JAVA'));
+
+    console.log(languages.toString());
+    console.log(languages.join(' <br> '));
+
+    let string = 'HTML,CSS,JAVA,JAVASCRIPT,PYTHON,RUST,JAVA,PHP,JAVA,KOTLIN';
+
+    document.getElementById('output').innerHTML = languages.join(' <br> ')
+    
+
+    // let languages = ['HTML','CSS','JAVA','JAVASCRIPT','PYTHON','RUST', 'JAVA', 'PHP','JAVA','KOTLIN']
+    let sliced = languages.slice(2, 3);  /// JAVA
+    console.log(sliced); // JAVA
+
+    console.log(languages);
+    
+    
+
+    languages.splice(2,2, 'JDK','JAVAC','JUM');  ///
+
+    console.log(languages);
+    
+    
+    
+    
+
+</script>
+</html>

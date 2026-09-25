@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            margin: .5em;
+            .box {
+                display: inline-block;
+                outline: solid 4px;
+                outline-offset: 2px;
+                width: 50px;
+                height:  50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="colorField"><button onclick="generateColors()">Generate Colors</button>
+    
+    <div id="output"></div>
+</body>
+<script>
+
+    function generateColors() {
+
+        let outputField = document.getElementById('output'); 
+        let colorField = document.getElementById('colorField'); 
+
+        let colorCount = colorField.value.trim(); 
+
+        if(colorCount && !isNaN(colorCount)){
+           
+            colorCount = +colorCount; 
+
+            let divField = '';
+
+            for(let i = 1; i <= colorCount; i++){
+                let rgb1 = Math.floor(Math.random() * 256) // 0 - 255
+                let rgb2 = Math.floor(Math.random() * 256) // 0 - 255
+                let rgb3 = Math.floor(Math.random() * 256) // 0 - 255
+
+                let rgbColor = `rgb(${rgb1},${rgb2},${rgb3})`;
+
+                divField += `<div class="box" style="background-color: ${rgbColor} "></div>`
+            }
+
+
+            outputField.innerHTML = divField
+            
+        }else{
+            alert('Please enter a valid number');
+        }
+
+    }
+
+</script>
+</html>
