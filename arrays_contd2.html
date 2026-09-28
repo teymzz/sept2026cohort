@@ -23,34 +23,50 @@
     // - pop
     // - shift
     // - unshift
-    // - reduce
-    // - sort
-
-    let languages = ['HTML','CSS','JAVA','JAVASCRIPT','PYTHON','RUST', 'JAVA', 'PHP','JAVA','KOTLIN']
-
-    console.log(languages.length);
-    console.log(languages.indexOf('JAVA'));
-    console.log(languages.lastIndexOf('JAVA'));
-
-    console.log(languages.toString());
-    console.log(languages.join(' <br> '));
-
-    let string = 'HTML,CSS,JAVA,JAVASCRIPT,PYTHON,RUST,JAVA,PHP,JAVA,KOTLIN';
-
-    document.getElementById('output').innerHTML = languages.join(' <br> ')
-    
 
     // let languages = ['HTML','CSS','JAVA','JAVASCRIPT','PYTHON','RUST', 'JAVA', 'PHP','JAVA','KOTLIN']
-    let sliced = languages.slice(2, 3);  /// JAVA
-    console.log(sliced); // JAVA
 
+    // console.log(languages.length);
+    // console.log(languages.indexOf('JAVA'));
+    // console.log(languages.lastIndexOf('JAVA'));
+
+    // // console.log(languages.toString());
+    // // // console.log(languages.join(' <br> '));
+    // // console.log(languages.join(' <br> '));
+
+    // let string = 'HTML,CSS,JAVA,JAVASCRIPT,PYTHON,RUST,JAVA,PHP,JAVA,KOTLIN';
+
+    // document.getElementById('output').innerHTML = languages.join(' <br> ')
+    
+
+
+
+
+
+
+
+    let languages = ['HTML','CSS','JAVA','JAVASCRIPT','PYTHON','RUST', 'JAVA', 'PHP','JAVA','KOTLIN']
+    let sliced = languages.slice(3, 4);  /// JAVA
+    console.log(sliced); // [JAVA, JAVASCRIPT]
+
+    console.log(languages);
+
+    // languages.splice(2, 4, 'DJANGO','FLUTTER');
+    languages.splice(1, 1);
+    console.log(languages);
+    
+    languages.splice(3, 1);
     console.log(languages);
     
     
+   
+    // console.log(languages);
+    
+    
 
-    languages.splice(2,2, 'JDK','JAVAC','JUM');  ///
+    // languages.splice(2,2, 'JDK','JAVAC','JUM');  ///
 
-    console.log(languages);
+    // console.log(languages);
     
     
     

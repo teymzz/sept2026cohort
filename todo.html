@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="todoField"> <button onclick="addTodo()">Add Todo</button>
+    <div id="output"></div>
+    
+</body>
+
+<script>
+
+    // let todoField = document.getElementById('todoField');  
+
+    // let myStorage = [];
+
+
+
+
+    // prompt('Please add todo');
+
+    // let array = ['HTML','CSS','JAVASCRIPT'];
+
+    // let allowDelete = confirm('Do you want to delete')
+
+    // if(allowDelete){
+    //     alert('You have chosen to delete')
+    // }else{
+    //     alert("You don't want to delete")
+    // }
+    
+    // let input = prompt('Please enter your name');
+
+    // if(input === null){
+    //     alert('You cancelled');
+    // }else{
+    //     input = input.trim();
+    //     if(!input){
+    //         alert('You did not type anything')
+    //     }else{
+    //         if(input === 'Admin') {
+    //             alert('Welcome admin user')
+    //         }else{
+    //             alert('Welcome, '+ input)
+    //         }    
+    //     }
+    // } 
+    
+
+
+    // function addTodo() {
+
+    //     let todo = todoField.value.trim();
+
+    //     if(todo){
+
+    //         myStorage.push(todo)
+    //         output.innerHTML = ''
+    //         for(let i =0; i < myStorage.length; i++){
+    //         //    output.innerHTML +=` ${myStorage[i]} <br>`
+    //            output.innerHTML = output.innerHTML + ` ${myStorage[i]} <button>Edit</button>  <button>Delete</button> <br>`
+    //         }
+            
+
+    //     }else{
+    //         alert('You cannot enter an empty todo')
+    //     }
+
+
+    // }
+
+    let myStorage = [];
+
+    function displayOutput() {
+        output.innerHTML = ''
+        for(let i =0; i < myStorage.length; i++){
+        //    output.innerHTML +=` ${myStorage[i]} <br>`
+            output.innerHTML = output.innerHTML + ` ${myStorage[i]} <button onclick="alert(${i})">Edit</button>  <button>Delete</button> <br>`
+        }
+    }
+
+    function addTodo() {
+
+      let input =  prompt('Please add todo');
+
+        if(input === null){
+            alert('You cancelled');
+        }else{
+            input = input.trim();
+            if(!input){
+                alert('You did not type anything')
+            }else{
+                myStorage.push(input);
+                displayOutput();
+            }
+        } 
+
+    }
+
+
+</script>
+</html>
