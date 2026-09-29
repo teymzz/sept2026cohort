@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    // - pop
+    // - shift
+    // - unshift
+
+    // let languages = 'html,css,javascript,python,php,rust'.toUpperCase().split(',') 
+    let languages = ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON', 'PHP', 'RUST']
+
+    let removedItem1 = languages.pop()  // RUST
+    let removedItem2 = languages.pop() // PHP
+
+    console.log(removedItem2); 
+    console.log(languages); //  ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON']
+
+    
+     let removedItem3 = languages.shift() // HTML
+
+     console.log(languages);
+     console.log(removedItem3);
+
+     languages.unshift('DJANGO')
+
+     console.log(languages);
+     
+    
+</script>
+</html>

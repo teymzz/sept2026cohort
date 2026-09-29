@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="num1"> 
+    <input id="num2"> 
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    
+</body>
+</html>
+<script>
+
+
+function calculate(operator){
+
+    if(operator === '+'){
+        console.log(+num1.value + +num2.value);
+    }else if(operator === '-'){
+        console.log(+num1.value - +num2.value);
+    }else if(operator === '*'){
+        console.log(+num1.value * +num2.value)
+    }else{
+        console.log(+num1.value / +num2.value)
+    }
+}
+
+
+//    function add(){
+//      //console.log('ade');
+//      return 'ade';
+     
+//    }
+// add()
+
+// function parameters 
+
+// function addTwo(number){
+//     let addition = number + 2; 
+//     console.log(addition);
+    
+// }
+
+// addTwo(20); 
+
+// function sum(a, b){
+//    return (a + b);
+// }
+
+// let total = sum(20, 30) + 500;
+// console.log(total);
+
+function add(a, b=20){
+       return (a + b);
+}
+
+console.log(add(10)) ;
+console.log(add(10, 50)) ;
+
+
+// function greetUser()
+
+// Task: create a function called greetUser to greet any user.
+// When you call the function it should display "Welcome user" by default
+// When you call the function with supplied name e.g "Admin", it should display "Welcome Admin"
+
+
+// function greetUser(username = 'user'){
+//     let greetWord = 'Welcome, ';
+
+//     greetWord = greetWord + username
+
+//     console.log(greetWord);
+
+// }
+
+// greetUser()
+// greetUser('Admin')
+
+
+// let userName = 'ade'
+
+// function changeName() {
+//     let userName = 'tayo'
+//     userName = 'bola';
+// }
+
+// console.log(userName); // ade
+
+// changeName(); // change it
+
+// console.log(userName); // ade
+
+
+let user = 'Femi' // global scope 
+
+function changeUser(name) {
+    user = name;
+}
+
+function changeUser2(name) {
+    let user;
+    user = name;
+}
+
+// console.log(user); // Femi
+
+// changeUser('Tola'); 
+// console.log(user);  // Tola
+
+// changeUser2('Tami');
+
+// console.log(user); // Tola
+
+
+// let num1  = 30; 
+// let num2  = 40; 
+// let num3  = 50; 
+// let num4 = 20; 
+
+// function changeNumber(num1, num3 = 40) {
+
+//     num2 = 30
+//     console.log(num2 + num1); // 40
+    
+//     function changeNumber2(num2) {
+
+//         function changeNumber3(num4){
+            
+//             console.log(num2 + num4); // 
+//         }
+
+//        changeNumber3(20); 
+//         console.log(num2 + num4); // 
+//     }
+
+//     changeNumber2(30)
+// }
+
+// changeNumber(10);
+
+</script>
