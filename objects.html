@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let myObject = {}
+
+myObject['name'] = 'ade'
+
+console.log(myObject);
+console.log(myObject['name']);
+console.log(myObject.name);
+
+myObject.name = 'tayo'
+console.log(myObject.name); // tayo
+myObject.age = 50; // tayo
+
+console.log(myObject.age); // 50 
+
+// let myObject2 = {0: []}
+
+// console.log(myObject2);
+ 
+
+let myObject2 = {
+    'user': {
+        'name' : 'Ade',
+        'age': '50', 
+        'hobbies': [
+            'Reading novel','Watching movies','Playing football'
+        ],
+        'schools': [
+            {
+                basic: [
+                    'Richmab','Success'
+                ],
+                secondary: [
+                    'Baptist','Queen school'
+                ]
+            }
+        ]
+    }
+}
+
+console.log(myObject2.user.schools[0].basic[0]);
+console.log(myObject2['user']['schools'][0]['basic'][0]);
+
+
+let object3 = {
+    'name' : 'Ade',
+    'age': 20,
+    'school': 'sqi',
+    'phone': 23456789,
+    'color': 'black',
+    'gender': 'Male',
+    'height': 'tall',
+    'hobbies': ['watch movies','play game']
+}
+
+let keysOfObject = Object.keys(object3)
+let valuesOfObject = Object.values(object3)
+
+console.log(keysOfObject);
+console.log(valuesOfObject);
+console.log(keysOfObject);
+console.log(Object.keys(object3).length);
+
+let objectKeys = Object.keys(object3)
+let lengthOfObject = objectKeys.length;
+
+
+console.log(objectKeys);
+
+
+for(let i=0; i<lengthOfObject; i++){
+    let key = objectKeys[i]
+    let value = object3[key]
+  
+    if(typeof value === 'string' ){
+        object3[key] = value.toUpperCase()
+    }else if(Array.isArray(value)){
+            let data = [] ;
+
+            for(let i =0; i < value.length; i++){
+                if(typeof (value[i]) === 'string'){
+                    data.push(value[i].toUpperCase())
+                }
+            }
+            object3[key] = data;
+    }
+    
+}
+
+// console.log(object3);
+
+
+for(let key in object3){
+    let value = object3[key];
+    console.log(key, value);
+}
+
+
+// Convert all words in object3 to upper letter case using a for loop
+
+</script>
+</html>
