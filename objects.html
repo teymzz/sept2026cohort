@@ -86,19 +86,16 @@ for(let i=0; i<lengthOfObject; i++){
     if(typeof value === 'string' ){
         object3[key] = value.toUpperCase()
     }else if(Array.isArray(value)){
-            let data = [] ;
-
             for(let i =0; i < value.length; i++){
                 if(typeof (value[i]) === 'string'){
-                    data.push(value[i].toUpperCase())
+                    object3[key][i] = value[i].toUpperCase()
                 }
             }
-            object3[key] = data;
     }
     
 }
 
-// console.log(object3);
+console.log(object3);
 
 
 for(let key in object3){
