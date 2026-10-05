@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // forEach()
+
+let languages = ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'PYTHON','RUST']
+
+languages.forEach((value, index, arr) => {
+    languages[index] = value + 1;
+})
+
+console.log(languages); // ['HTML1', 'CSS1', 'JAVASCRIPT1', 'PHP1', 'PYTHON1','RUST1']]
+
+// map(), find(), findIndex(), some(), filter(), every(), reduce(), sort(), 
+
+let languagesModified = languages.map((value, index, arr) => {
+ return value.slice(0, value.length -1);
+})
+
+console.log(languages); // ['HTML1', 'CSS1', 'JAVASCRIPT1', 'PHP1', 'PYTHON1','RUST1']]
+
+console.log(languagesModified); // ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'PYTHON','RUST']]
+
+
+console.log(languagesModified.findIndex((value, index, arr) => {
+    return value === 'JAVASCRIPT'
+}));
+
+console.log(languagesModified.find((value, index, arr) => {
+    return value === 'JAVASCRIPT'
+}));
+
+
+
+
+
+
+
+</script>
+</html>

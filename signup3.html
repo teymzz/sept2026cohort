@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background: white;
+  width: 380px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  position: relative;
+  text-align: center;
+  border-top: 5px solid #00f2fe;
+}
+
+/* Mascot Animation Styles */
+.mascot-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: -90px auto 10px; /* Pulls mascot up */
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.mascot {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Hands Animation */
+.hands path {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-box: fill-box;
+  transform-origin: bottom;
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+}
+
+/* When password field is focused (This class added via JS) */
+.mascot.blind .hands path {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.mascot.blind .eyes-open {
+  opacity: 0; /* Hide eyes when hands cover them */
+}
+
+.title {
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input, 
+.input-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; /* Fix width issues */
+}
+
+.input-group select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.input-group {
+  position: relative;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 15px;
+  bottom: 12px;
+  font-size: 10px;
+  color: #888;
+  pointer-events: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #4facfe;
+  background: #fff;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.footer a {
+  color: #4facfe;
+  text-decoration: none;
+  font-weight: 600;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+  
+  <div class="login-card">
+    <div class="mascot-wrapper">
+      <svg class="mascot" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="50" fill="#4facfe"/>
+        <circle cx="60" cy="60" r="45" fill="#00f2fe"/>
+        
+        <path d="M15 30 Q10 10 30 15" fill="#4facfe" stroke="#fff" stroke-width="3"/>
+        <path d="M105 30 Q110 10 90 15" fill="#4facfe" stroke="#fff" stroke-width="3"/>
+
+        <g class="eyes-open">
+          <circle cx="45" cy="55" r="8" fill="#fff"/>
+          <circle cx="45" cy="55" r="4" fill="#333"/>
+          <circle cx="75" cy="55" r="8" fill="#fff"/>
+          <circle cx="75" cy="55" r="4" fill="#333"/>
+        </g>
+        
+        <path d="M50 75 Q60 85 70 75" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+
+        <g class="hands">
+          <path class="hand-left" d="M10 110 Q20 40 50 55" stroke="#4facfe" stroke-width="12" stroke-linecap="round" fill="none" />
+          <path class="hand-right" d="M110 110 Q100 40 70 55" stroke="#4facfe" stroke-width="12" stroke-linecap="round" fill="none" />
+        </g>
+      </svg>
+    </div>
+
+    <h2 class="title">Join Visernic</h2>
+    
+    <form class="form">
+        <div id="response-field"></div>
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="fullname" placeholder="MD Mostafa Niloy" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="hello@visernic.com" required>
+      </div>
+
+      <div class="input-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="+880 1XXX XXXXXX" required>
+      </div>
+
+      <div class="input-group">
+        <label>Gender</label>
+        <select required id="gender">
+          <option value="" disabled selected>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="select-arrow">▼</div>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+
+      <button id="create_account" onclick="createAccount()" type="button" class="submit-btn">Create Account</button>
+    </form>
+
+    <div class="footer">
+      <p>Developed by <a href="https://visernic.com" target="_blank">Visernic Limited</a></p>
+    </div>
+  </div>
+
+</div>
+
+<a href="https://visernic.com" style="display:none">Sign Up Form by Visernic</a>    
+</body>
+
+<script>
+
+    let stringItem = 'adeola';
+
+    // /adeola/.test(stringItem)
+
+    // adeola@gmail.com
+    // adeola123@gmail.com
+    // ^[A-Za-z][A-Z-a-z0-9_]*@[A-Z].(com|org|outlook)$
+    // console.log(/^[ab]$/i.test(stringItem));
+
+    // console.log(/^[A-Za-z0-9]+$/i.test('ade66767343ola'));  ///  ABCD..Z, abcd .. z
+
+    // console.log(/^[A-Za-z0-9]+$/i.test('ade66767343ola'));  ///  ABCD..Z, abcd .. z
+
+    // // console.log(/^[A-Za-z][A-Z-a-z0-9_]+\@[A-Z]+\.(com|org|outlook)$/i.test('adeola@gmail.outlook'));
+    // console.log(/^[A-Za-z][A-Z-a-z0-9_]+\@[A-Z]+\.[A-Za-z]+$/i.test('adeola@gmail.abi'));
+    
+
+
+    
+    
+    function createAccount(){
+        let fullNameField = document.getElementById('fullname')
+        let emailField = document.getElementById('email')
+        let phoneField = document.getElementById('phone')
+        let genderField = document.getElementById('gender')
+        let passwordField = document.getElementById('password')
+
+        let responseField = document.getElementById('response-field');
+
+        let fullname = fullNameField.value.trim();
+        let email = emailField.value.trim();
+        let phone = phoneField.value.trim();
+        let gender= genderField.value.trim();
+        let password = passwordField.value.trim();
+
+        if(!fullname){
+            responseField.innerHTML = 'Fullname is required.'
+        }else if(fullname.length < 2){
+            responseField.innerHTML = 'Fullname must be a minumum of 2 characters'
+        }else if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
+            responseField.innerHTML = 'Email is invalid';
+        }else if(!phone){
+            responseField.innerHTML = 'Phone is required';
+        }else if(!gender){
+            responseField.innerHTML = 'Please select your gender';
+        }else if(!password){
+            responseField.innerHTML = 'Please enter your password';
+        }else if(password.length < 6){
+            responseField.innerHTML = 'Password must be more than 6 characters';
+        }else{
+           responseField.innerHTML =' User signed up successfully'
+        }
+        
+
+        
+        console.log(fullNameField, emailField, phoneField, genderField, passwordField);
+    }
+
+</script>
+</html>
+
