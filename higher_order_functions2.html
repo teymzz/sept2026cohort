@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <div class=""><input id="username"></div>
+        <div class=""><input id="password"></div>
+        <button onclick="signup()">Signup</button>
+    
+</body>
+<script>
+
+    let usersList = [];
+
+    // [
+    //      {
+    //         'username': 'ade',
+    //         'password': '12131'
+    //     },
+    //      {
+    //         'username': 'segun',
+    //         'password': '2132312'
+    //     }
+    // ]
+    // let format = {
+    //     'username': 'userVal',
+    //     'password': 'passwordVal'
+    // };
+
+    function signup(){
+
+        let userName = document.getElementById('username').value.trim();
+        let userPass = document.getElementById('password').value.trim();
+
+        console.log(userName);
+        console.log(userPass);
+        
+
+        if(!userName || !userPass){
+            alert('Username and password fields are required.')
+        }else{
+
+            let userFound = usersList.find((val) => {
+                return val.username === userName
+            })
+
+            if(userFound){
+                alert('User already exist. Please use different username')
+            }else{
+                usersList.push({
+                    username: userName,
+                    password: userPass,
+                });
+
+                alert('user signed up successfully')
+            }
+
+            console.log(usersList);
+            
+
+        }
+
+
+
+
+
+    }
+    
+
+    // every(), filter(), some(), findIndex(), find(), map(), reduce(), sort(), forEach() 
+
+    let textBooks = ['math','english'];
+
+    // console.log(textBooks[1]);
+    
+    let languages = [ 'ENGLISH','FRENCH','YORUBA','ARABIC','FINNISH','LATIN', [] ]
+
+    // [1,1,1,1,1,1,1]
+
+    // for(let i = 0; i<languages.length; i++){
+    //     console.log(languages[i])
+    // }
+
+    // languages.forEach((val, i, arr) => {
+
+    //     console.log('ade' + i); 
+        
+
+    //     // if(languages[i]  === 'YORUBA') {
+    //     //     languages[i] = 'PIDGIN'
+    //     // }
+    // })
+
+    // map 
+    let languagesModified = languages.map((val, i) => {
+       if(typeof val === 'string'){
+        return languages[i] = val + 1;
+       }
+      return val;
+    })
+    console.log(languages);
+    console.log(languagesModified);
+
+    let name = 'ade';
+    let password = '4356'; 
+
+    let userData = [
+        {
+            name: 'ade',
+            password: '1234',
+            age: 50,
+            color: 'while',
+            gender: 'male',
+        },
+        {
+            name: 'ade',
+            password: '4356',
+            age: 30,
+            color: 'black',
+            gender: 'female',
+        },
+        {
+            name: 'bola',
+            password: '2423',
+            age: 12,
+            color: 'yellow',
+            gender: 'male',
+        },
+        {
+            name: 'ade',
+            password: '4356',
+            age: 15,
+            color: 'blue',
+            gender: 'female',
+        }
+    ]; 
+
+
+    let userFound = userData.find((val, i) => {
+
+       
+        return (val.name === name && val.password === password )
+        
+
+    })
+
+    let userIndex = userData.findIndex((val, i) => {
+
+       
+        return (val.name === name && val.password === password )
+        
+
+    })
+
+    console.log(userFound, userIndex);
+    
+
+    let languages2 = [ 'ENGLISH','FRENCH','YORUBA','ARABIC','FINNISH','LATIN' ]
+    
+    let isTrue= languages2.every((val) =>{
+        if(typeof val === 'string') return true;
+    });
+
+    
+    let languages3 = [ [], 'ENGLISH', [],12234, {} ]
+
+    let isTrue3= languages3.some((val) =>{
+        if(typeof val === 'string') return true;
+    });
+
+    console.log(isTrue);
+
+    let inputValue = 'en';
+    
+    let countries = [
+        {country: 'English',count:91},
+        {country: 'French',count:45},
+        {country: 'Arabic',count:25},
+        {country: 'Spanish',count:24},
+        {country:'Russian',count:9},
+        {country:'Portuguese', count:9},
+        {country:'Dutch',count:8},
+        {country:'German',count:7},
+        {country:'Chinese',count:5},
+        {country:'Swahili',count:4}
+    ]
+
+    let filteredCountries = countries.filter((val)=> {
+            return val.country.toLowerCase().includes(inputValue)
+    });
+
+    console.log(filteredCountries);
+    
+
+
+
+</script>
+</html>
